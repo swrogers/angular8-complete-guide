@@ -22,6 +22,7 @@ export class PracticeComponentComponent implements OnInit {
 
   onResetButtonClick() {
     this.userName = '';
+    this.userNameIsEmpty = true;
   }
 
 }
