@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'practice-directives';
+  showParagraph = false;
+  clickCount = 0;
+  clickArray = [];
+
+  onToggleClick() {
+    this.showParagraph = !this.showParagraph;
+    this.clickCount += 1;
+    this.clickArray.push(this.clickCount);
+  }
 }
