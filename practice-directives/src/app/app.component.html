@@ -18,6 +18,6 @@
 
 <ul>
   <div *ngFor="let c of clickArray; index as i">
-    <li>Click {{ c }}</li>
+    <li [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'white'}">Click {{ c }}</li>
   </div>
 </ul>
