@@ -17,7 +17,9 @@
 <p *ngIf="showParagraph">I'm a paragraph with some text. Or something.</p>
 
 <ul>
-  <div *ngFor="let c of clickArray; index as i">
-    <li [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'white'}">Click {{ c }}</li>
-  </div>
+  <li *ngFor="let c of clickArray; index as i"
+    [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'white'}">
+
+      Click {{ c }}
+  </li>
 </ul>
