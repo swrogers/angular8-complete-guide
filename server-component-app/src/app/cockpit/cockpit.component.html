@@ -10,7 +10,11 @@
 
 
     <label>Server Content</label>
-    <input type="text" class="form-control" [(ngModel)]="newServerContent">
+    <!-- <input type="text" class="form-control" [(ngModel)]="newServerContent"> -->
+    <input
+      type="text"
+      class="form-control"
+      #serverContentInput>
     <br>
     <div class="btn-toolbar">
       <button
