@@ -8,8 +8,35 @@
     <li>Simply output Odd - Number, or Even - Number in the two components</li>
     <li>Style the element (eg, paragraph) holding your output text differently in both components.</li>
   </ol>
-</div>
+
 
 <hr>
 
-<app-game-control></app-game-control>
+  <app-game-control
+    (gameStartRunning)="onGameRunning($event)">
+
+  </app-game-control>
+
+  <div class="row">
+    <!-- <app-even
+      *ngIf="theNumber%2 === 0"
+      [arrayIn]="evenArray">
+    </app-even>
+
+    <app-odd
+      *ngIf="theNumber%2 === 1"
+      [arrayIn]="oddArray">
+    </app-odd> -->
+    <div class="col-md-6">
+      <app-even
+        [arrayIn]="evenArray">
+      </app-even>
+    </div>
+    <div class="col-md-6">
+      <app-odd
+        [arrayIn]="oddArray">
+      </app-odd>
+    </div>
+  </div>
+
+</div>
