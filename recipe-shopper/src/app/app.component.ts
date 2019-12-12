@@ -1,3 +1,4 @@
+import { Recipe } from './recipes/recipe.model';
 import { Component } from '@angular/core';
 
 @Component({
