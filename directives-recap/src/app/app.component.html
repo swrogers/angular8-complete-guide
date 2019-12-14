@@ -30,7 +30,9 @@
         </div>
       </ul>
       <p appBasicHighlight>Style be with basic directive</p>
-      <p appBetterHighlight>Style be with a better directive</p>
+      <!-- <p [appBetterHighlight]="'red'" [defaultColor]="'yellow'">Style be with a better directive</p> -->
+      <!-- The below is a shortcut for passing string input to the directive -->
+      <p [appBetterHighlight]="'red'" defaultColor="yellow">Style be with a better directive</p>
     </div>
   </div>
 </div>
