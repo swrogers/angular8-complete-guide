@@ -1,4 +1,4 @@
-import { Directive, HostBinding, HostListener } from '@angular/core';
+import { Directive, HostBinding, HostListener, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[appDropdown]'
@@ -6,9 +6,11 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
 export class DropdownDirective {
   @HostBinding('class.open') menuShown = false;
 
-  constructor() {}
+  constructor(private elRef: ElementRef) {}
 
-  @HostListener('click') onClick() {
-    this.menuShown = !this.menuShown;
+  @HostListener('document:click', ['$event']) onClick(event: Event) {
+    this.menuShown = this.elRef.nativeElement.contains(event.target) ?
+      !this.menuShown :
+      false;
   }
 }
