@@ -1,6 +1,10 @@
+import { CounterService } from './counter.service';
+
 export class UsersService {
   activeUsers = ['Max', 'Anna'];
   inactiveUsers = ['Chris', 'Manu'];
+
+  constructor() {}
 
   setUserInactive(id: number) {
     this.inactiveUsers.push(this.activeUsers[id]);
