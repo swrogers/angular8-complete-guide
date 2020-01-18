@@ -7,7 +7,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @ViewChild('f') signupForm: NgForm;
+  @ViewChild('f', {static: false}) signupForm: NgForm;
 
   title = 'form-handling';
 
