@@ -21,4 +21,25 @@ export class AppComponent {
   onSubmit() {
     console.log(this.signupForm);
   }
+
+  suggestUserName() {
+    const suggestedName = 'Superuser';
+
+    // This will overwrite any existing values
+    // this.signupForm.setValue({
+    //   userData: {
+    //     username: suggestedName,
+    //     email: ''
+    //   },
+    //   secret: 'pet',
+    //   questionAnswer: '',
+    //   gender: 'male'
+    // });
+
+    this.signupForm.form.patchValue({
+      userData: {
+        username: suggestedName
+      }
+    });
+  }
 }
