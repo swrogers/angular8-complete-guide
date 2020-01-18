@@ -12,19 +12,8 @@ export class RecipesComponent implements OnInit {
 
   currentRecipe: Recipe;
 
-  constructor(private recipeService: RecipeService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.recipeService.recipeSelected
-      .subscribe(
-        (recipe: Recipe) => {
-          this.currentRecipe = recipe;
-        }
-      );
-  }
-
-  onRecipeOutFromList(eventData: Recipe) {
-    this.currentRecipe = eventData;
-  }
-
+ }
 }
