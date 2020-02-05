@@ -37,10 +37,23 @@ export class AppComponent implements OnInit {
           // console.log(status);
         }
       );
+
+    // Prepoulating a form
+    // - you can use patchValue to only set a portion of a form
+    this.signupForm.setValue({
+      'userData': {
+        'username': 'Shane',
+        'email': 'shane@email.com'
+      },
+      'gender': 'male',
+      'hobbies': []
+    });
+
   }
 
   onSubmit() {
     console.log(this.signupForm);
+    this.signupForm.reset();
   }
 
   onAddHobby() {
