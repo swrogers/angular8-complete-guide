@@ -21,8 +21,8 @@ export class ShoppingEditComponent implements OnInit {
     );
   }
 
-  onClearButtonClicked() {
-    this.shoppingForm.reset();
+  onClearButtonClicked(form: NgForm) {
+    form.reset();
   }
 
 }
